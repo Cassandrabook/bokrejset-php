@@ -5,8 +5,6 @@
 
     $pdo = require 'partials/connect.php';
 
-    $db = new DB($pdo);
-
     $bookModel = new BookModel($pdo);
     $bookView = new BookView();
 

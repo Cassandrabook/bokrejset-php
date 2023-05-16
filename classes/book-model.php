@@ -9,9 +9,9 @@
             return $this->getAll($this->table);
         }
 
-        public function addBook($title, $pages){
-            $sql = "INSERT INTO $this->table ('title', 'pages') VALUES (?, ?)";
+        public function addBook(string $title, int $pages, int $authorId){
+            $sql = "INSERT INTO $this->table ('title', 'pages', 'author_id') VALUES (?, ?, ?)";
             $statement = $this->pdo->prepare($sql);
-            $statement->execute([$title, $pages]);
+            $statement->execute([$title, $pages, $authorId]);
         }
     }

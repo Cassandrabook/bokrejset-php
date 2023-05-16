@@ -10,7 +10,6 @@
 
     $pdo = require 'partials/connect.php';
 
-    $db = new DB($pdo);
     $userModel = new UserModel($pdo);
     $userView = new UserView();
 
