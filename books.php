@@ -7,7 +7,7 @@
 
     $db = new DB($pdo);
 
-     $bookModel = new BookModel($pdo);
+    $bookModel = new BookModel($pdo);
     $bookView = new BookView();
 
     include 'partials/header.php';
@@ -16,6 +16,7 @@
     $books = $bookModel->getAllBooks();
     $bookView->renderAllBooksAsList($bookModel->getAllBooks());
 
-   include 'partials/footer.php';
+    include 'partials/book-form.php';
+    include 'partials/footer.php';
 
 ?>
