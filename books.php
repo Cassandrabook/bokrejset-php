@@ -11,7 +11,7 @@
     include 'partials/header.php';
     include 'partials/nav.php';
 
-    $books = $bookModel->getAllBooks();
+    // $books = $bookModel->getAllBooks();
     $bookView->renderAllBooksAsList($bookModel->getAllBooks());
 
     include 'partials/book-form.php';

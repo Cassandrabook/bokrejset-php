@@ -5,17 +5,15 @@
 
     $pdo = require 'partials/connect.php';
 
-    $db = new DB($pdo);
-
     $userBookModel = new UserBookModel($pdo);
     $userBookView = new UserBooksView();
 
     include 'partials/header.php';
     include 'partials/nav.php';
 
-    $userBooks = $userBookModel->getAllUserBooks();
     $userBookView->renderAllUserBooksAsList($userBookModel->getAllUserBooks());
 
+    include 'partials/review-form.php';
    include 'partials/footer.php';
 
 ?>

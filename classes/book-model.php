@@ -7,10 +7,11 @@
         
         public function getAllBooks(){
             return $this->getAll($this->table);
+            // $ass_array = $this->getAll($this->table);
         }
 
         public function addBook(string $title, int $pages, int $authorId){
-            $sql = "INSERT INTO $this->table ('title', 'pages', 'author_id') VALUES (?, ?, ?)";
+            $sql = "INSERT INTO $this->table (title,pages,author_id) VALUES (?,?,?)";
             $statement = $this->pdo->prepare($sql);
             $statement->execute([$title, $pages, $authorId]);
         }
