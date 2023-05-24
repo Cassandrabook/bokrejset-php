@@ -8,12 +8,13 @@
         }
 
         public function getBooksByUserId($userId){
-            $sql = "SELECT b.title, ub.review 
+            $sql = "SELECT b.title, ub.review, u.name AS userName
                     FROM books AS b
                     INNER JOIN userbooks AS ub ON b.id = ub.bookId
-                    WHERE ub.userId = :user_id";
+                    INNER JOIN users AS u ON u.id = ub.userId
+                    WHERE ub.userId = :userId";
             $statement = $this->pdo->prepare($sql);
-            $statement->execute(['user_id' => $userId]);
+            $statement->execute(['userId' => $userId]);
             return $statement->fetchAll(PDO::FETCH_ASSOC);
         }
 

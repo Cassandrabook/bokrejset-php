@@ -22,8 +22,8 @@
 
     $userView->renderAllUsersAsList($userModel->getAllUsers());
 
-    if(isset($_GET['user_id'])){
-        $userId = $_GET['user_id'];
+    if(isset($_GET['userId'])){
+        $userId = $_GET['userId'];
         $books = $userBookModel->getBooksByUserId($userId);
         $userBookView->renderAllUserBooksAsList($books);
     }
