@@ -2,7 +2,6 @@
     require_once 'model/author-model.php';
     
     $authorModel = new AuthorModel(connect($host, $db, $user, $password));
-
 ?>
 
 <form action="form-handlers/book-form-handler.php" method="post">
@@ -25,11 +24,8 @@
                         {$author['firstname']} {$author['lastname']}
                     </option>";
                 }
-
             ?>
         </select>
     </div>
-    <button type="submit">Lägg till bok</button>
-    
-    
+    <button type="submit">Lägg till bok</button>  
 </form>

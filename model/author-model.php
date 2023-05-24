@@ -8,7 +8,5 @@
         public function getAllAuthors(){
             return $this->getAll($this->table);
         }
-
     }
-
 ?>

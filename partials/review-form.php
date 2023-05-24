@@ -24,7 +24,6 @@ $bookModel = new BookModel($pdo);
                         {$user['name']}
                     </option>";
                 }
-
             ?>
         </select>
     </div>
@@ -42,11 +41,8 @@ $bookModel = new BookModel($pdo);
                         {$book['title']}
                     </option>";
                 }
-
             ?>
         </select>
     </div>
-    <button type="submit">Lägg till recension</button>
-    
-    
+    <button type="submit">Lägg till recension</button>  
 </form>

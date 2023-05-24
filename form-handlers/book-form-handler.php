@@ -10,8 +10,6 @@
         $authorId = filter_var($_POST['author-id'], FILTER_SANITIZE_NUMBER_INT);
 
         $bookModel->addBook($title, $pages, $authorId);
-
     }
-
     header("Location: ../books.php");
 ?>
