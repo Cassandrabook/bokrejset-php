@@ -1,5 +1,5 @@
 <?php
-    require_once 'classes/author-model.php';
+    require_once 'model/author-model.php';
     
     $authorModel = new AuthorModel(connect($host, $db, $user, $password));
 

@@ -1,7 +1,7 @@
 <?php
     require 'classes/db.php';
-    require 'classes/userBook-view.php';
-    require 'classes/userBook-model.php';
+    require 'view/userBook-view.php';
+    require 'model/userBook-model.php';
 
     $pdo = require 'partials/connect.php';
 

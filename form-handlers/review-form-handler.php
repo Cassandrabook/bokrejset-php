@@ -1,5 +1,6 @@
 <?php
-    require '../classes/userBook-model.php';
+    require_once "../classes/db.php";
+    require '../model/userBook-model.php';
 
     // $bookModel = new BookModel(require '../partials/connect.php');
     $reviewModel = new UserBookModel(require '../partials/connect.php');

@@ -1,6 +1,6 @@
 <?php
-    require_once 'classes/user-model.php';
-    require_once 'classes/book-model.php';
+    require_once 'model/user-model.php';
+    require_once 'model/book-model.php';
     
     $userModel = new UserModel(connect($host, $db, $user, $password));
     $bookModel = new BookModel(connect($host, $db, $user, $password));

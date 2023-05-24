@@ -1,13 +1,10 @@
 <?php
 
-    require_once "db.php";
-
     class BookModel extends DB { 
         protected $table = "books"; 
         
         public function getAllBooks(){
             return $this->getAll($this->table);
-            // $ass_array = $this->getAll($this->table);
         }
 
         public function addBook(string $title, int $pages, int $authorId){

@@ -1,7 +1,7 @@
 <?php
     require 'classes/db.php';
-    require 'classes/book-view.php';
-    require 'classes/book-model.php';
+    require 'view/book-view.php';
+    require 'model/book-model.php';
 
     $pdo = require 'partials/connect.php';
 
@@ -11,7 +11,6 @@
     include 'partials/header.php';
     include 'partials/nav.php';
 
-    // $books = $bookModel->getAllBooks();
     $bookView->renderAllBooksAsList($bookModel->getAllBooks());
 
     include 'partials/book-form.php';
