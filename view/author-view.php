@@ -5,8 +5,8 @@ class AuthorView {
         echo "<h4>Författare:</h4>";
         echo "<ul>";
         foreach($authors as $author){
-            echo "<li> {$author['firstname']} {$author['lastname']} </li>";
-        }
+            echo "<li><a href='authors.php?author_id={$author['id']}'>{$author['firstname']} {$author['lastname']}</a></li>";
         echo "</ul>";
+        }
     }
 }

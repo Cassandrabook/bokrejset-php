@@ -13,6 +13,12 @@
 
     $authorView->renderAllAuthorsAsList($authorModel->getAllAuthors());
 
+    if(isset($_GET['author_id'])){
+        $authorId = $_GET['author_id'];
+        $authors = $authorModel->getBooksByAuthorId($authorId);
+        $authorView->renderAllAuthorsAsList($authors);
+    }
+
     include 'partials/author-form.php';
     include 'partials/footer.php';
 
